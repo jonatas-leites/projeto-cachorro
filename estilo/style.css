@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'cabecalho';
+    src: url('../fontes/Honeymoon.otf') format(TrueType);
+}
+
+@font-face {
+    font-family: 'conteudo';
+    src: url('../fontes/CampanaScript_PERSONAL_USE_ONLY.otf') format(TrueType);
+
+}
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'cabecalho', sans-serif;
+    --fonte3: 'conteudo', cursive;
+
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;/* configurações gerais pra tirar os espaços*/    
+}
+
+html,body{
+    max-height:400px;
+    background-color: black;
+    font-family: var(--fonte1);
+}
+
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
+}
+
+header > p {
+    padding-bottom: 50px;
+} 
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 10px;
+    font-family: var(--fonte3);
+    font-size: 4vw;/*4 vezes o tamanho da largura da tela*/
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal > p {
+    background-color: white;
+    color: black;
+    padding-left: 10px;
+    font-family: var(--fonte3);
+    font-size: 1.8em;
+}
+
+section.imagem{
+    background-color: rgba(51, 51, 51);
+    color: white;
+    font-family: var(--fonte3);
+    font-size: 1.8em;
+    box-shadow: inset 6px 6px 13px 0px black;
+    background-size: cover;/* para deixar menor a imagem*/
+    background-attachment: fixed;/* para fixar a imagem*/
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.214);
+    text-shadow: 1px 1px 0px;
+    font-family: var(--fonte3);
+    font-size: 1.8em;
+}
+
+
+
+section#img01{
+    background-image: url('../imagens/img01.jpg');
+    background-position: left center;
+}
+
+section#img02{
+    background-image: url('../imagens/img32.jpg');
+    background-position: top right;
+}
+
+section#img03{
+    background-image: url('../imagens/img23.jpg');
+    background-position: left center;
+}
+
+section#img04{
+
+    background-image: url('../imagens/222.jpg');
+    
+    background-position: center top;
+}
+
+img.foto{
+    max-width:450px; /*largura maximada imagem*/
+    display: block;
+    margin: auto;/*para centralizar*/
+}
+footer > p {
+color: white;
+}
